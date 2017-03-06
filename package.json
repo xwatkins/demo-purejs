@@ -1,0 +1,25 @@
+{
+  "name": "demo-purejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile-css": "node-sass scss/uniprot.scss -o dist",
+    "compile-js": "browserify src/main.js --outfile dist/uniprot.js --debug --transform babelify",
+    "build": "npm run compile-css && npm run compile-js",
+    "sass-watch": "node-sass --watch scss/uniprot.scss -o dist",
+    "js-watch": "watch -p 'src/**/*.js' -c 'npm run compile-js'",
+    "serve": "npm run js-watch & npm run sass-watch & browser-sync start --server '.' --files './dist/**/*.*'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015-nostrict": "^6.6.2",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "node-sass": "^4.5.0",
+    "watch-cli": "^0.2.1"
+  }
+}

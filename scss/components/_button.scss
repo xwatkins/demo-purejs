@@ -1,0 +1,20 @@
+$button-padding:1.5em;
+
+.button {
+  display: inline-block;
+  padding: $button-padding;
+  background-color: $colour-light-blue;
+  text-decoration: none;
+  border: 1px solid $colour-light-blue;
+  -webkit-transition: border 1s; /* Safari */
+  transition: border 1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 1px solid $colour-uniprot-blue;
+}
+
+.button:active {
+  border-top: 4px solid $colour-uniprot-blue;
+}
