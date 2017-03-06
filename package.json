@@ -6,7 +6,7 @@
   "scripts": {
     "compile-css": "node-sass scss/uniprot.scss -o dist",
     "compile-js": "browserify src/main.js --outfile dist/uniprot.js --debug --transform babelify",
-    "build": "npm run compile-css && npm run compile-js",
+    "build": "mkdir dist && npm run compile-css && npm run compile-js",
     "sass-watch": "node-sass --watch scss/uniprot.scss -o dist",
     "js-watch": "watch -p 'src/**/*.js' -c 'npm run compile-js'",
     "serve": "npm run js-watch & npm run sass-watch & browser-sync start --server '.' --files './dist/**/*.*'"
